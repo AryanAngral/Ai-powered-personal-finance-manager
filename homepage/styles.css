@@ -1,0 +1,190 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+/* Moving Money Background Animation */
+@keyframes moveMoney {
+    from { transform: translateY(100vh); opacity: 1; }
+    to { transform: translateY(-10vh); opacity: 0; }
+}
+
+.money-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.money-symbol {
+    position: absolute;
+    color: #2c3e50;
+    font-size: 24px;
+    opacity: 0;
+    animation: moveMoney 5s linear infinite;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    position: absolute;
+    left: 5%; /* Adjusted to move title more left */
+    transform: translateX(-50%);
+}
+
+.logo img {
+    width: 150px; /* Increased size */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 80px; /* Adjust the value as needed */ /* Adjust as needed */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #007bff;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 80vh;
+}
+
+.tagline {
+    position: absolute;
+    left: -100%;
+    top: 25%;
+    font-size: 80px;
+    font-weight: bold;
+    opacity: 0;
+    animation: moveTagline 2s ease-out forwards;
+}
+
+/* Moving tagline animation */
+@keyframes moveTagline {
+    0% {
+        left: -100%;
+        opacity: 0;
+    }
+    100% {
+        left: 10%;
+        opacity: 1;
+    }
+}
+
+.moving-image {
+    position: absolute;
+    right: -180%;
+    top: 1%; /* Moves the image up */
+    width: 500px; /* Adjust image size */
+    animation: moveImage 2s ease-out forwards;
+}
+
+/* Moving image animation */
+@keyframes moveImage {
+    0% {
+        right: -100%;
+        opacity: 0;
+    }
+    100% {
+        right: 10%;
+        opacity: 1;
+    }
+}
+
+/* Personal Finance Manager Section */
+.pfm-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px; /* Reduced padding to decrease white space */
+}
+
+.pfm-info {
+    flex: 1;
+    position: sticky;
+    top: 20px;
+    max-width: 2000px;
+    height: 350px;
+    background: #f0f8ff;
+    padding: 50px;
+    border-radius: 50px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateX(-100%);
+    opacity: 0;
+    font-size: 20px
+}
+
+.pfm-info.active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.pfm-info:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.pfm-features {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.feature-box {
+    background: #e2e9f0;
+    padding: 15px;
+    margin: 5px 0;
+    width: 600px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.feature-box.active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.feature-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
