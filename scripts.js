@@ -1,4 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const name = localStorage.getItem("fullName");
+  if (name) {
+      document.getElementById("welcomeUser").innerText = `Welcome, ${name}!`;
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function () {
     const dashboard = document.getElementById("dashboard");
   
     // Handle navigation clicks
