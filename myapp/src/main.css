@@ -1,0 +1,70 @@
+/* Main CSS file with general styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Money Background Animation */
+@keyframes moveMoney {
+    from { transform: translateY(100vh); opacity: 1; }
+    to { transform: translateY(-10vh); opacity: 0; }
+}
+
+.money-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.money-symbol {
+    position: absolute;
+    color: #2c3e50;
+    font-size: 24px;
+    opacity: 0;
+    animation: moveMoney 5s linear infinite;
+}
+
+/* Container styles */
+.container {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 80vh;
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .tagline {
+        font-size: 40px;
+    }
+    
+    .moving-image {
+        width: 300px;
+    }
+    
+    .dashboard-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+    }
+    
+    .charts-container {
+        grid-template-columns: 1fr;
+    }
+}
