@@ -1,0 +1,74 @@
+/* Investment Page Styles */
+.portfolio-summary {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.portfolio-value {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.portfolio-change {
+    font-size: 16px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.allocation-chart {
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.investment-list {
+    list-style: none;
+    padding: 0;
+}
+
+.investment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.investment-item:last-child {
+    border-bottom: none;
+}
+
+.investment-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.investment-name {
+    font-weight: bold;
+    margin: 0;
+}
+
+.investment-type {
+    color: #7f8c8d;
+    font-size: 14px;
+    margin: 5px 0 0;
+}
+
+.investment-performance {
+    text-align: right;
+}
+
+.investment-value {
+    font-weight: bold;
+    margin: 0;
+}
